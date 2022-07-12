@@ -11,9 +11,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from rest_framework import permissions
-from administrativo.serializers import UserSerializer, GroupSerializer, \
-EstudianteSerializer, NumeroTelefonicoSerializer
-
+from departamentos.serializers import *
 # importar las clases de models.py
 from departamentos.models import *
 

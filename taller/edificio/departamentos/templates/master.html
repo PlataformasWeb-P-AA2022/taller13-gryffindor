@@ -17,12 +17,30 @@
   </head>
   <body>
   <header>
+
     <h1>Aplicación Edificios </h1>
+    <div class="">
+      {% if messages %}
+        <div class="messages">
+          {% for message in messages %}
+          <span{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
     <nav class="top_menu">
       <ul>
+        {% if user.is_authenticated %}
+        <li> <span class="nombre_usuario"> Bienvenido: {{user.username}} </span></li>
+        {% endif %}
         <li><a href="{% url 'index' %}">Inicio</a></li>
         <li><a href="{% url 'crear_edificio' %}">Agregar Edificio</a></li>
         <li><a href="{% url 'crear_departamento' %}">Agregar Departamento</a></li>
+        {% if user.is_authenticated %}
+          <li><a href="{% url 'logout_view' %}">salir</a></li>
+        {% else %}
+          <li>[<a href="{% url 'login' %}">ingresar</a>]</li>
+        {% endif %}
       </ul>
     </nav>
   </header>

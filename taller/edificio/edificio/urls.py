@@ -24,7 +24,7 @@ from departamentos import views
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
-router.register(r'edificio', views.EdificioViewSet)
+router.register(r'edificios', views.EdificioViewSet)
 router.register(r'departamentos', views.DepartamentoViewSet)
 
 urlpatterns = [

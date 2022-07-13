@@ -62,3 +62,4 @@ def obtener_estudiante(url):
     apellido_estudiante = json.loads(r.content)['apellido']
     cadena = "%s %s" % (nombre_estudiante, apellido_estudiante)
     return cadena
+    

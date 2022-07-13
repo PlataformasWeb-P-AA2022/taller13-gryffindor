@@ -12,8 +12,8 @@ def hello_world():
     return "<p>Hello, World!</p>"
 
 
-@app.route("/losedificios")
-def los_edificios():
+@app.route("/edificio")
+def edificios():
     """
     """
     r = requests.get("http://127.0.0.1:8000/api/edificios/",
@@ -24,8 +24,8 @@ def los_edificios():
                            numero_edificios=numero_edificios)
 
 
-@app.route("/losdepartamentos")
-def los_departamentos():
+@app.route("/departamentos")
+def departamentos():
     """
     """
     r = requests.get("http://127.0.0.1:8000/api/departamentos/",
@@ -36,8 +36,8 @@ def los_departamentos():
                            numero=numero)
 
 
-@app.route("/losdepartamentosdos")
-def los_departamentos_dos():
+@app.route("/departamentosdos")
+def departamentos_dos():
     """
     """
     r = requests.get("http://127.0.0.1:8000/api/departamentos/",

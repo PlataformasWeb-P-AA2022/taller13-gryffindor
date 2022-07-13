@@ -20,7 +20,7 @@ def los_edificios():
                      auth=(user, passw))
     edificios = json.loads(r.content)['results']
     numero_edificios = json.loads(r.content)['count']
-    return render_template("losestudiantes.html", edificios=edificios,
+    return render_template("losedificios.html", edificios=edificios,
                            numero_edificios=numero_edificios)
 
 
